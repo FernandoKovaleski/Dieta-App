@@ -1,4 +1,4 @@
-package Model;
+package Dominio;
 
 import java.time.LocalDate;
 
@@ -10,6 +10,7 @@ public class Pessoa {
     private LocalDate dataNascimento;
 
 // Método Construtor
+
 
     public Pessoa(Long id, String nome, String login, LocalDate dataNascimento) {
         this.id = id;
@@ -33,4 +34,22 @@ public class Pessoa {
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    //TODO IMPLEMENTAR REGRA DE NEGOCIO
 }
