@@ -7,15 +7,14 @@ public class Pessoa {
     private Long id;
     private String nome;
     private String login;
+    private String senha;
     private LocalDate dataNascimento;
 
-// Método Construtor
-
-
-    public Pessoa(Long id, String nome, String login, LocalDate dataNascimento) {
+    public Pessoa(Long id, String nome, String login, String senha, LocalDate dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.login = login;
+        this.senha = senha;
         this.dataNascimento = dataNascimento;
     }
 
@@ -29,6 +28,9 @@ public class Pessoa {
 
     public String getLogin() {
         return login;
+    }
+    public String getSenha() {
+        return senha;
     }
 
     public LocalDate getDataNascimento() {
@@ -46,10 +48,12 @@ public class Pessoa {
     public void setLogin(String login) {
         this.login = login;
     }
+    public void setSenha (String senha){
+        this.senha = senha;
+    }
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
-    //TODO IMPLEMENTAR REGRA DE NEGOCIO
 }

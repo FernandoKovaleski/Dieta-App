@@ -11,11 +11,10 @@ public class Usuario extends Pessoa {
     private Refeicao refeicao;
     private Float metabolismo;
 
-    public Usuario(Long id, String nome, String login, LocalDate dataNascimento,
-                   Float altura, Float peso, Enum sexo, Enum situacao,
-                   Enum fatorAtividade, Refeicao refeicao, Float metabolismo) {
-
-        super(id, nome, login, dataNascimento);
+    public Usuario(Long id, String nome, String login, String senha, LocalDate dataNascimento,
+                   Float altura, Float peso, Enum sexo, Enum situacao, Enum fatorAtividade,
+                   Refeicao refeicao, Float metabolismo) {
+        super(id, nome, login, senha, dataNascimento);
         this.altura = altura;
         this.peso = peso;
         this.sexo = sexo;
@@ -79,11 +78,6 @@ public class Usuario extends Pessoa {
 
     public void setMetabolismo(Float metabolismo) {
         this.metabolismo = metabolismo;
-    }
-
-    //Regra Negocio
-    public void fazerRefeicao(){
-
     }
 
     //TODO REGRA DE NEGOCIO

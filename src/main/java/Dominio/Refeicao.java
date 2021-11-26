@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class Refeicao {
     private Long id;
     private String nome;
-    private Enum tipo;
+    private Enum tipoRefeicao;
     private LocalDate diaDaSemana;
 
     public Refeicao(Long id, String nome, Enum tipo, LocalDate diaDaSemana) {
         this.id = id;
         this.nome = nome;
-        this.tipo = tipo;
+        this.tipoRefeicao = tipo;
         this.diaDaSemana = diaDaSemana;
     }
 
@@ -31,12 +31,12 @@ public class Refeicao {
         this.nome = nome;
     }
 
-    public Enum getTipo() {
-        return tipo;
+    public Enum getTipoRefeicao() {
+        return tipoRefeicao;
     }
 
-    public void setTipo(Enum tipo) {
-        this.tipo = tipo;
+    public void setTipoRefeicao(Enum tipoRefeicao) {
+        this.tipoRefeicao = tipoRefeicao;
     }
 
     public LocalDate getDiaDaSemana() {
@@ -46,5 +46,5 @@ public class Refeicao {
     public void setDiaDaSemana(LocalDate diaDaSemana) {
         this.diaDaSemana = diaDaSemana;
     }
-    //TODO IMPLEMENTAR REGRA DE NEGOCIO
+
 }
