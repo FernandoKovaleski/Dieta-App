@@ -1,10 +1,6 @@
 package Test;
 
 
-import Dominio.Alimento;
-import Dominio.Porcao;
-import Dominio.Servico;
-
 //TODO TESTE
 public class TestServico {
     public static void main(String[] args) {

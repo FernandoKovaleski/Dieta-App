@@ -1,50 +1,37 @@
 package Dominio;
 
-import java.time.LocalDate;
-
 public class Refeicao {
-    private Long id;
-    private String nome;
-    private Enum tipoRefeicao;
-    private LocalDate diaDaSemana;
+    private Integer id;
+    private TipoRefeicao tipoRefeicao;
+    private Alimento alimento;
 
-    public Refeicao(Long id, String nome, Enum tipo, LocalDate diaDaSemana) {
+    public Refeicao(Integer id, TipoRefeicao tipoRefeicao, Alimento alimento) {
         this.id = id;
-        this.nome = nome;
-        this.tipoRefeicao = tipo;
-        this.diaDaSemana = diaDaSemana;
+        this.tipoRefeicao = tipoRefeicao;
+        this.alimento = alimento;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Enum getTipoRefeicao() {
+    public TipoRefeicao getTipoRefeicao() {
         return tipoRefeicao;
     }
 
-    public void setTipoRefeicao(Enum tipoRefeicao) {
+    public void setTipoRefeicao(TipoRefeicao tipoRefeicao) {
         this.tipoRefeicao = tipoRefeicao;
     }
 
-    public LocalDate getDiaDaSemana() {
-        return diaDaSemana;
+    public Alimento getAlimento() {
+        return alimento;
     }
 
-    public void setDiaDaSemana(LocalDate diaDaSemana) {
-        this.diaDaSemana = diaDaSemana;
+    public void setAlimento(Alimento alimento) {
+        this.alimento = alimento;
     }
-
 }
