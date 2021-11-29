@@ -4,6 +4,7 @@ public class Refeicao {
     private Integer id;
     private TipoRefeicao tipoRefeicao;
     private Alimento alimento;
+    private DiaSemana diaSemana;
 
     public Refeicao(Integer id, TipoRefeicao tipoRefeicao, Alimento alimento) {
         this.id = id;

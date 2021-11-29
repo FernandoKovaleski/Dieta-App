@@ -1,16 +1,19 @@
 package Dominio;
 
+import java.sql.Ref;
 import java.time.LocalDate;
 
 public class Diario {
     private Long id;
     private LocalDate data;
     private String relatorio;
+    private Refeicao refeicao;
 
-    public Diario(Long id, LocalDate data, String relatorio) {
+    public Diario(Long id, LocalDate data, String relatorio, Refeicao refeicao) {
         this.id = id;
         this.data = data;
         this.relatorio = relatorio;
+        this.refeicao = refeicao;
     }
 
     public Long getId() {
@@ -37,5 +40,12 @@ public class Diario {
         this.relatorio = relatorio;
     }
 
+    public Refeicao getRefeicao() {
+        return refeicao;
+    }
+
+    public void setRefeicao(Refeicao refeicao) {
+        this.refeicao = refeicao;
+    }
     //TODO IMPLEMENTAR REGRA DE NEGOCIO
 }

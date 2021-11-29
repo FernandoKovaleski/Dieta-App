@@ -5,23 +5,23 @@ import java.time.LocalDate;
 public class Usuario extends Pessoa {
     private Float altura;
     private Float peso;
+    private Float metabolismo;
     private Enum sexo;
     private Enum situacao;
     private Enum fatorAtividade;
-    private Refeicao refeicao;
-    private Float metabolismo;
+    private Servico servico;
 
-    public Usuario(Long id, String nome, String login, String senha, LocalDate dataNascimento,
-                   Float altura, Float peso, Enum sexo, Enum situacao, Enum fatorAtividade,
-                   Refeicao refeicao, Float metabolismo) {
+    public Usuario(Long id, String nome, String login, String senha, LocalDate dataNascimento, Float altura,
+                   Float peso, Float metabolismo, Enum sexo, Enum situacao, Enum fatorAtividade,
+                   Servico servico) {
         super(id, nome, login, senha, dataNascimento);
         this.altura = altura;
         this.peso = peso;
+        this.metabolismo = metabolismo;
         this.sexo = sexo;
         this.situacao = situacao;
         this.fatorAtividade = fatorAtividade;
-        this.refeicao = refeicao;
-        this.metabolismo = metabolismo;
+        this.servico = servico;
     }
 
     public Float getAltura() {
@@ -38,6 +38,14 @@ public class Usuario extends Pessoa {
 
     public void setPeso(Float peso) {
         this.peso = peso;
+    }
+
+    public Float getMetabolismo() {
+        return metabolismo;
+    }
+
+    public void setMetabolismo(Float metabolismo) {
+        this.metabolismo = metabolismo;
     }
 
     public Enum getSexo() {
@@ -64,21 +72,11 @@ public class Usuario extends Pessoa {
         this.fatorAtividade = fatorAtividade;
     }
 
-    public Refeicao getRefeicao() {
-        return refeicao;
+    public Servico getServico() {
+        return servico;
     }
 
-    public void setRefeicao(Refeicao refeicao) {
-        this.refeicao = refeicao;
+    public void setServico(Servico servico) {
+        this.servico = servico;
     }
-
-    public Float getMetabolismo() {
-        return metabolismo;
-    }
-
-    public void setMetabolismo(Float metabolismo) {
-        this.metabolismo = metabolismo;
-    }
-
-    //TODO REGRA DE NEGOCIO
 }
